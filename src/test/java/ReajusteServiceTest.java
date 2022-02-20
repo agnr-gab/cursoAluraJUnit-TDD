@@ -30,13 +30,13 @@ public class ReajusteServiceTest {
     }
 
     @Test
-    public void reajusteDeveriaSerDeVinteorcentoQuandoDesempenhoForOtimo() {
+    public void reajusteDeveriaSerDeVintePorcentoQuandoDesempenhoForOtimo() {
         ReajusteService service = new ReajusteService();
         Funcionario funcionario = new Funcionario("Teste de Funcionario", LocalDate.now(),
                 new BigDecimal("1000"));
 
         service.concenderReajuste(funcionario, Desempenho.OTIMO);
-        Assertions.assertEquals(new BigDecimal("1300.00"), funcionario.getSalario());
+        Assertions.assertEquals(new BigDecimal("1200.00"), funcionario.getSalario());
     }
 
 
