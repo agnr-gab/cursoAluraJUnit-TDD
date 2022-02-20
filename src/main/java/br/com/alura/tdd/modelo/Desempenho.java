@@ -1,2 +1,5 @@
-package br.com.alura.tdd.modelo;public enum Desempenho {
+package br.com.alura.tdd.modelo;
+
+public enum Desempenho {
+    A_DESEJAR;
 }
