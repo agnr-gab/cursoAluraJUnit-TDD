@@ -3,7 +3,8 @@
 ## Regras para concessão de bônus salarial
 
 - O bônus será de **10%** sobre o salário do funcionário.
-- Mas se o valor do **salário for maior do que mil reais**, ele altera o valor do bônus para zero e o **funcionário não receberá o bônus**.
+- O valor do bonus **não poderá** ser maior que 1mil reais.
+- Se o valor do **salário for maior do que 10mil reais**, ele altera o valor do bônus para zero e o **funcionário não receberá o bônus**.
 
 ## Reajuste baseado no desempenho anual
 
