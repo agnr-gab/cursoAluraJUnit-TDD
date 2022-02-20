@@ -1,11 +1,11 @@
-#Esse projeto simula de departamento de RH em relação a reajuste salarial e bônus salarial.
+# Esse projeto simula de departamento de RH em relação a reajuste salarial e bônus salarial.
 
-##Regras para concessão de bônus salarial
+## Regras para concessão de bônus salarial
 
 - O bônus será de **10%** sobre o salário do funcionário.
 - Mas se o valor do **salário for maior do que mil reais**, ele altera o valor do bônus para zero e o **funcionário não receberá o bônus**.
 
-##Reajuste baseado no desempenho anual
+## Reajuste baseado no desempenho anual
 
 _O sistema deve permitir que os funcionários recebam um reajuste salarial anual baseado em seu desempenho, obedecendo às seguintes regras:_
 
