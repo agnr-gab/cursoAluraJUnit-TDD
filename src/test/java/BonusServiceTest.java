@@ -8,16 +8,25 @@ import java.time.LocalDate;
 
 public class BonusServiceTest {
     @Test
-    void bonusDeveriaSerZeroParaFuncionarioComSalarioMuitoAlto(){
+    void bonusDeveriaSerZeroParaFuncionarioComSalarioMuitoAlto() {
         BonusService bonusService = new BonusService();
-        BigDecimal bonus = bonusService.calcularBonus(new Funcionario("Funcionário Teste", LocalDate.now(), new BigDecimal("25000")));
+        Assertions.assertThrows(IllegalArgumentException.class, () ->
+                bonusService.calcularBonus(new Funcionario("Funcionário Teste",
+                        LocalDate.now(), new BigDecimal("25000"))));
 
-        Assertions.assertEquals(new BigDecimal("0.00"), bonus);
+        //fazendo usando o try e catch
+       /* try {
+        bonusService.calcularBonus(new Funcionario("Funcionário Teste",
+                LocalDate.now(), new BigDecimal("25000")));
+        fail("Não entrou na exceção");
+        } catch (Exception exception) {
+           assertEquals("Funcionário com valor acima do permitido para receber bonus!");
 
+        }*/
     }
 
     @Test
-    void bonusDeveriaSer10PorCentoDoSalario(){
+    void bonusDeveriaSer10PorCentoDoSalario() {
         BonusService bonusService = new BonusService();
         BigDecimal bonus = bonusService.calcularBonus(new Funcionario("Funcionário Teste", LocalDate.now(), new BigDecimal("2500")));
 
@@ -26,7 +35,7 @@ public class BonusServiceTest {
     }
 
     @Test
-    void bonusDeveriaSer10PorCentoParaSalarioDeExatamente10Mil(){
+    void bonusDeveriaSer10PorCentoParaSalarioDeExatamente10Mil() {
         BonusService bonusService = new BonusService();
         BigDecimal bonus = bonusService.calcularBonus(new Funcionario("Funcionário Teste", LocalDate.now(), new BigDecimal("10000")));
 
